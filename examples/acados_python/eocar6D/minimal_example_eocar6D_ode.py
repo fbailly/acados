@@ -13,8 +13,8 @@ ocp = AcadosOcp()
 # set model
 model = export_eocar6D_ode_model()
 ocp.model = model
-ocp.solver_options.model_external_shared_lib_dir     = os.getcwd()+"/test_external_lib/build"
-ocp.solver_options.model_external_shared_lib_name    = "external_ode_casadi"
+# ocp.solver_options.model_external_shared_lib_dir     = os.getcwd()+"/test_external_lib/build"
+# ocp.solver_options.model_external_shared_lib_name    = "external_ode_casadi"
 
 Tf = 2
 nx = model.x.size()[0]

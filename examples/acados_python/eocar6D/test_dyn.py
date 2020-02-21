@@ -29,12 +29,12 @@ def forw_dyn(x,u):
   return np.vstack([accLin, accAng])
 
 x0 = np.ones((12,1))
-x0[3]  = 0
-x0[4]  = 0
-x0[5]  = 0
-# x0[9]  = 0.5
-# x0[10] = 0.5
-# x0[11] = 0.5
+x0[3]  = 1
+x0[4]  = 1
+x0[5]  = 1
+x0[9]  = 1
+x0[10] = 1
+x0[11] = 1
 u0 = np.zeros((6,1))
 print(f"my forward dyn :\n {forw_dyn(x0,u0)}")
 print(f"brbd forward dyn :\n {m.ForwardDynamics(x0[:6].squeeze(),x0[6:].squeeze(),u0.squeeze()).to_array()}")
